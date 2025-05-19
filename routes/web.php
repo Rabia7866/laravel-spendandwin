@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminParticipantController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WinnerController;
+use App\Http\Controllers\DescriptionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,5 +45,7 @@ Route::get('admin=announce-winner', [AdminController::class, 'announceWinner']);
 
 Route::get('winners.users', [WinnerController::class, 'index']);
 Route::get('delete.winner.participant/{id}', [WinnerController::class, 'Delete']);
+
+Route::get('description', [DescriptionController::class, 'index']);
 
 
